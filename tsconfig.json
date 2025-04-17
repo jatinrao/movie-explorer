@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Modern JS output
+    "lib": ["DOM", "DOM.Iterable", "ES2022"], // DOM + latest ES features
+    "module": "ESNext", // Use modern ESM
+    "moduleResolution": "Bundler", // Best for Vite/Webpack
+    "jsx": "react-jsx", // Use React 17+ JSX transform
+    "strict": true, // Enable all strict type checks
+    "noEmit": true, // Don't output files (handled by bundler)
+    "esModuleInterop": true, // Allow `import fs from 'fs'`
+    "allowSyntheticDefaultImports": true, // Support default imports for CJS
+    "resolveJsonModule": true, // Import .json files
+    "isolatedModules": true, // Required for tools like Vite
+    "skipLibCheck": true, // Speed up builds
+    "forceConsistentCasingInFileNames": true // Enforce consistent casing
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
