@@ -13,6 +13,9 @@ module.exports = {
     clean: true,
     publicPath: "/",
   },
+  optimization: {
+    usedExports: true,
+  },
   devtool: isDevelopment ? "eval-source-map" : "source-map",
   devServer: {
     static: {

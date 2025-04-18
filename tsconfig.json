@@ -1,19 +1,40 @@
 {
   "compilerOptions": {
-    "target": "ES2022", // Modern JS output
-    "lib": ["DOM", "DOM.Iterable", "ES2022"], // DOM + latest ES features
-    "module": "ESNext", // Use modern ESM
-    "moduleResolution": "Bundler", // Best for Vite/Webpack
-    "jsx": "react-jsx", // Use React 17+ JSX transform
-    "strict": true, // Enable all strict type checks
-    "noEmit": true, // Don't output files (handled by bundler)
-    "esModuleInterop": true, // Allow `import fs from 'fs'`
-    "allowSyntheticDefaultImports": true, // Support default imports for CJS
-    "resolveJsonModule": true, // Import .json files
-    "isolatedModules": true, // Required for tools like Vite
-    "skipLibCheck": true, // Speed up builds
-    "forceConsistentCasingInFileNames": true // Enforce consistent casing
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node", "webpack-dev-server"],
+    "outDir": "./dist",
+    "noEmit": true,
+    "sourceMap": true,
+    "lib": ["dom", "dom.iterable", "esnext"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    ".eslintrc.js",
+    "webpack.config.js",
+    "jest.config.js",
+    "src/**/*",
+    "test/**/*.ts",
+    "test/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "dist", "test/**/*.js"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }

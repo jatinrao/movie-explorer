@@ -30,6 +30,7 @@ export default [
       // React specific
       "react/react-in-jsx-scope": "off", // For React 17+ with automatic JSX
       "react/prop-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
 
       // Prettier
       "prettier/prettier": "error",
@@ -39,10 +40,13 @@ export default [
     ignores: [
       "babel.config.js",
       "eslint.config.js",
+      "jest.config.ts",
+      "jest.setup.ts",
       "webpack.config.js",
       ".eslintrc.js",
       "dist/**",
       "node_modules/**",
+      "test/__mocks__/**",
     ],
   },
 ];

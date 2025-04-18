@@ -4,13 +4,14 @@ module.exports = (api) => {
 
   return {
     presets: [
-      "@babel/preset-env",
+      ["@babel/preset-env", { targets: { node: "current" } }],
       [
         "@babel/preset-react",
         {
           runtime: "automatic",
         },
       ],
+      "@babel/preset-typescript",
     ],
     plugins: [isDev && require.resolve("react-refresh/babel")].filter(Boolean),
   };
