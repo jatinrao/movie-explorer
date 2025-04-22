@@ -1,11 +1,12 @@
 Here are some deployment options:
-Netlify
-Vercel
-AWS S3 + CloudFront.
-AWS with EC2 and nginx
-GitHub Pages
-Cloudfront Workers
-Firebase Hosting
+
+1. Netlify
+2. Vercel
+3. AWS S3 + CloudFront
+4. AWS with EC2 and Nginx
+5. GitHub Pages
+6. Cloudflare Workers
+7. Firebase Hosting
 
 I will pick top 2 out of given option for comparison (Both can be used depending upon roadmap of the app) :
 As Vercel and Netlify are similar in most of aspects and offering, combining as one option:
